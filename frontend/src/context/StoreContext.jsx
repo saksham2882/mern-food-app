@@ -8,7 +8,8 @@ const StoreContextProvider = ({ children, setShowLogin }) => {
     const [cartItems, setCartItems] = useState({});
     const [discount, setDiscount] = useState(0);
     const [appliedCoupon, setAppliedCoupon] = useState(null);
-    const url = "http://localhost:4000";
+
+    const url = process.env.VITE_APP_API_URL;
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
 
