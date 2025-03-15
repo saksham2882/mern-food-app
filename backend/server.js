@@ -13,7 +13,7 @@ const port = 4000
 
 // middleware
 app.use(express.json())
-app.use(cors())
+app.use(cors({origin : 'https://mern-food-app-zeta.vercel.app'}))
 
 // db connection
 connectDB();
@@ -32,5 +32,5 @@ app.get("/", (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Server is running on  http://localhost:${port}`)
+    console.log("Server is running")
 }) 
