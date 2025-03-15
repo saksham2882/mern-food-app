@@ -1,0 +1,45 @@
+.food-display {
+  margin-top: clamp(30px, 4vw, 50px);
+  padding: 0 clamp(10px, 2vw, 20px);
+}
+
+.food-display h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: clamp(20px, 5vw, 40px);
+  margin-top: clamp(20px, 2.5vw, 30px);
+  color: #445b56;
+}
+
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(15px, 2.5vw, 30px);
+  margin-top: clamp(15px, 2vw, 30px);
+}
+
+@media (max-width: 1050px) {
+  .food-display-list {
+    gap: clamp(12px, 2vw, 25px);
+  }
+}
+
+@media (max-width: 750px) {
+  .food-display-list {
+    grid-template-columns: 1fr;
+    gap: clamp(10px, 2vw, 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .food-display {
+    margin-top: clamp(20px, 3vw, 30px);
+    padding: 0 clamp(5px, 1.5vw, 15px);
+  }
+  .food-display h2 {
+    font-size: clamp(20px, 3vw, 28px);
+    margin-top: clamp(15px, 2vw, 25px);
+    margin-bottom: clamp(15px, 2vw, 25px);
+  }
+}

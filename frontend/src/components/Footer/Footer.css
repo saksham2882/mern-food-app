@@ -1,0 +1,226 @@
+.footer {
+  background: linear-gradient(180deg, #1a3c34 0%, #15302a 100%);
+  color: #d9d9d9;
+  padding: clamp(20px, 3vw, 40px) clamp(15px, 3vw, 30px);
+  margin-top: clamp(60px, 8vw, 100px);
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto clamp(15px, 2vw, 25px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(15px, 2vw, 30px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.5vw, 15px);
+  max-width: 50%;
+}
+
+.footer-logo {
+  width: clamp(90px, 12vw, 120px);
+  height: auto;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 0.6vw, 8px);
+}
+
+.footer-contact p {
+  font-size: clamp(13px, 1.4vw, 15px);
+  margin: 0;
+}
+
+.footer-contact a {
+  color: #d9d9d9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+}
+
+.footer-left p {
+  font-size: clamp(13px, 1.4vw, 15px);
+  color: #e0e0e0;
+  line-height: 1.4;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: clamp(8px, 1vw, 12px);
+}
+
+.footer-social-icons img {
+  height: 25px;
+  filter: invert(50%) sepia(10%) saturate(200%) hue-rotate(180deg)
+    brightness(95%) contrast(90%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.15);
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(110%)
+    contrast(100%);
+}
+
+.footer-right {
+  max-width: 50%;
+}
+
+.footer-right h3 {
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: clamp(8px, 1vw, 12px);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: clamp(8px, 0.8vw, 12px);
+}
+
+.newsletter-form input {
+  padding: clamp(6px, 0.8vw, 10px);
+  font-size: clamp(13px, 1.4vw, 15px);
+  border: none;
+  border-radius: clamp(4px, 0.6vw, 6px);
+  width: clamp(160px, 20vw, 220px);
+  background-color: #fff;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  box-shadow: 0 0 clamp(4px, 0.5vw, 8px) rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: clamp(6px, 0.8vw, 10px) clamp(12px, 1.5vw, 18px);
+  font-size: clamp(13px, 1.4vw, 15px);
+  font-weight: 600;
+  color: #1a3c34;
+  background-color: #fff;
+  border: none;
+  border-radius: clamp(4px, 0.6vw, 6px);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 1.8vw, 25px);
+  padding: 0;
+  margin-bottom: clamp(15px, 2vw, 20px);
+}
+
+.footer-links li {
+  list-style: none;
+}
+
+.footer-links a {
+  color: #d9d9d9;
+  font-size: clamp(13px, 1.4vw, 15px);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-copyright {
+  font-size: clamp(11px, 1.1vw, 13px);
+  color: #e0e0e0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1050px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-right {
+    max-width: 100%;
+  }
+  .footer-social-icons {
+    justify-content: center;
+  }
+  .footer-left {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer {
+    padding: clamp(25px, 4vw, 50px) clamp(15px, 3vw, 30px);
+  }
+  .footer-links {
+    gap: clamp(10px, 1.5vw, 20px);
+  }
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter-form input {
+    width: clamp(200px, 50vw, 300px);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    margin-top: clamp(40px, 6vw, 80px);
+    padding: clamp(20px, 4vw, 40px) clamp(10px, 2vw, 20px);
+  }
+  .footer-left {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    width: clamp(80px, 12vw, 120px);
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: clamp(8px, 1.2vw, 15px);
+  }
+}

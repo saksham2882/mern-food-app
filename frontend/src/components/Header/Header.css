@@ -1,0 +1,95 @@
+.header {
+  height: 34vw;
+  margin: 20px auto;
+  background: url("/Food background.png") no-repeat center;
+  background-size: 100% auto;
+  border-radius: 20px;
+  position: relative;
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5vw;
+  width: 50%;
+  bottom: 8%;
+  right: 3.5vw;
+  padding: 1vw;
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header-contents h2 {
+  color: white;
+  font-size: max(4.5vw, 22px);
+  font-weight: 700;
+  margin: 0;
+  text-align: right;
+}
+
+.header-contents p {
+  color: white;
+  font-size: max(1.5vw, 12px);
+  margin: 0;
+  text-align: right;
+}
+
+.header-contents button {
+  border: none;
+  color: #747474;
+  font-weight: 700;
+  padding: 1vw 2vw;
+  background-color: white;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .header {
+    border-radius: 15px;
+  }
+  .header-contents {
+    right: 2.5vw;
+    padding: 1.5vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    border-radius: 15px;
+  }
+  .header-contents {
+    right: 2vw;
+    padding: 2vw;
+  }
+  .header-contents p {
+    display: none;
+  }
+  .header-contents button {
+    padding: 2vw 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-contents {
+    width: 75%;
+    gap: 2vw;
+  }
+  .header-contents h2 {
+    font-size: max(4vw, 18px);
+  }
+  .header-contents button {
+    font-size: max(2vw, 12px);
+  }
+}

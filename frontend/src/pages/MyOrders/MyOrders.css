@@ -1,0 +1,271 @@
+.my-orders {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.my-orders h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.no-orders {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.order-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.parcel-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.order-summary {
+  flex: 1;
+  min-width: 0;
+}
+
+.order-items {
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+}
+
+.order-items li {
+  display: inline;
+}
+
+.order-items li:after {
+  content: ", ";
+}
+
+.order-items li:last-child:after {
+  content: "";
+}
+
+.order-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 5px 0 0;
+}
+
+.order-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.order-items-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.order-status {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.order-status.food-processing .status-dot {
+  background: #ff9800;
+}
+
+.order-status.out-for-delivery .status-dot {
+  background: #2196f3;
+}
+
+.order-status.delivered .status-dot {
+  background: #4caf50;
+}
+
+.track-button {
+  background: #00695c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.track-button:hover {
+  background: #004d40;
+}
+
+.track-button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .my-orders {
+    margin: 40px 10px;
+    padding: 0 10px;
+  }
+
+  .my-orders h2 {
+    font-size: 24px;
+  }
+
+  .order-card {
+    padding: 15px;
+  }
+
+  .order-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-items {
+    font-size: 14px;
+  }
+
+  .order-amount {
+    font-size: 15px;
+  }
+
+  .order-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .order-items-count,
+  .order-status {
+    font-size: 13px;
+  }
+
+  .track-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .my-orders h2 {
+    font-size: 20px;
+  }
+
+  .order-card {
+    padding: 12px;
+  }
+
+  .order-header {
+    gap: 8px;
+  }
+
+  .parcel-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .order-items {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .order-items li {
+    display: block;
+  }
+
+  .order-items li:after {
+    content: "";
+  }
+
+  .order-amount {
+    font-size: 14px;
+  }
+
+  .order-items-count,
+  .order-status {
+    font-size: 12px;
+  }
+
+  .track-button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .my-orders {
+    margin: 20px 5px;
+    padding: 0 5px;
+  }
+
+  .order-card {
+    padding: 10px;
+  }
+
+  .order-items {
+    font-size: 12px;
+  }
+
+  .order-amount {
+    font-size: 13px;
+  }
+}

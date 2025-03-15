@@ -1,0 +1,198 @@
+.contact-us {
+  margin: clamp(50px, 8vw, 100px) auto;
+  padding: 0 clamp(10px, 2vw, 20px);
+  text-align: center;
+  max-width: 1200px;
+}
+
+.contact-us h2 {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #1a3c34;
+  margin-bottom: clamp(10px, 1.5vw, 20px);
+}
+
+.contact-us .subtitle {
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #666;
+  margin-bottom: clamp(30px, 4vw, 50px);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(20px, 3vw, 40px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 245, 240, 0.8) 0%,
+    rgba(245, 255, 250, 0.8) 100%
+  );
+  border-radius: clamp(10px, 1.5vw, 15px);
+  box-shadow: 0 clamp(4px, 0.8vw, 8px) clamp(6px, 1vw, 12px) rgba(0, 0, 0, 0.1);
+  padding: clamp(20px, 3vw, 40px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 600;
+  color: #333;
+  margin-bottom: clamp(10px, 1.5vw, 20px);
+}
+
+.contact-info p {
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #666;
+  margin-bottom: clamp(8px, 1vw, 15px);
+}
+
+.contact-info p strong {
+  color: #333;
+}
+
+.social-links {
+  display: flex;
+  gap: clamp(10px, 1.5vw, 20px);
+  margin-top: clamp(15px, 2vw, 25px);
+}
+
+.social-links .social-icon {
+  height: 25px;
+  filter: invert(50%) sepia(80%) saturate(500%) hue-rotate(160deg)
+    brightness(90%) contrast(95%);
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+  filter: invert(95%) sepia(90%) saturate(600%) hue-rotate(160deg)
+    brightness(85%) contrast(100%);
+}
+
+.contact-form {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-form h3 {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 600;
+  color: #333;
+  margin-bottom: clamp(15px, 2vw, 25px);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.5vw, 20px);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: clamp(8px, 1vw, 12px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  border: 1px solid #ddd;
+  border-radius: clamp(5px, 0.8vw, 8px);
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1a3c34;
+  box-shadow: 0 0 clamp(4px, 0.5vw, 8px) rgba(26, 60, 52, 0.2);
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: clamp(80px, 10vw, 120px);
+}
+
+.contact-form button {
+  padding: clamp(10px, 1.5vw, 15px) clamp(20px, 2.5vw, 30px);
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 600;
+  color: #fff;
+  background-color: #1a3c34;
+  border: none;
+  border-radius: clamp(5px, 0.8vw, 8px);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #15302a;
+  transform: scale(1.02);
+}
+
+.contact-container:hover {
+  box-shadow: 0 clamp(6px, 1vw, 12px) clamp(8px, 1.2vw, 16px)
+    rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1050px) {
+  .contact-container {
+    padding: clamp(15px, 2.5vw, 30px);
+  }
+}
+
+@media (max-width: 750px) {
+  .contact-container {
+    flex-direction: column;
+    padding: clamp(12px, 2vw, 25px);
+  }
+  .contact-info,
+  .contact-form {
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us {
+    margin: clamp(40px, 8vw, 80px) auto;
+    padding: 0 clamp(5px, 1vw, 10px);
+  }
+  .contact-us h2 {
+    font-size: clamp(22px, 3.5vw, 32px);
+    margin-bottom: clamp(8px, 1.5vw, 15px);
+  }
+  .contact-us .subtitle {
+    font-size: clamp(12px, 1.5vw, 16px);
+    margin-bottom: clamp(20px, 3vw, 30px);
+  }
+  .contact-container {
+    padding: clamp(10px, 1.5vw, 20px);
+  }
+  .contact-info h3,
+  .contact-form h3 {
+    font-size: clamp(16px, 2vw, 20px);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+  .contact-form button {
+    font-size: clamp(12px, 1.5vw, 16px);
+    padding: clamp(8px, 1.2vw, 12px) clamp(15px, 2vw, 25px);
+  }
+}
