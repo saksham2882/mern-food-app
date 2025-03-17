@@ -9,7 +9,7 @@ const StoreContextProvider = ({ children, setShowLogin }) => {
     const [discount, setDiscount] = useState(0);
     const [appliedCoupon, setAppliedCoupon] = useState(null);
 
-    const url = process.env.VITE_APP_API_URL || "http://localhost:4000";
+    const url = "https://mern-food-app-backend-vtca.onrender.com";
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
 
