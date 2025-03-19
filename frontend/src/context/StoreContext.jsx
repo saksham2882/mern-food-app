@@ -8,6 +8,7 @@ const StoreContextProvider = ({ children, setShowLogin }) => {
     const [cartItems, setCartItems] = useState({});
     const [discount, setDiscount] = useState(0);
     const [appliedCoupon, setAppliedCoupon] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const url = "https://mern-food-app-backend-vtca.onrender.com";
     const [token, setToken] = useState("");
@@ -55,9 +56,26 @@ const StoreContextProvider = ({ children, setShowLogin }) => {
         return totalAmount;
     };
 
+    const wakeUpBackend = async()=>{
+        try{
+            await axios.get(url);
+        }catch(error){
+            console.log("Wake-up request failed: ", error);
+        }
+    }
+
     const fetchFoodList = async () => {
-        const response = await axios.get(url + "/api/food/list");
-        setFoodList(response.data.data);
+        setLoading(true);
+        try{
+            const response = await axios.get(url + "/api/food/list");
+            setFoodList(response.data.data);
+        }
+        catch(error){
+            console.error("Error fetching food list: ", error);
+        }
+        finally{
+            setLoading(false);
+        }
     };
 
     const loadCartData = async (token) => {
@@ -102,6 +120,7 @@ const StoreContextProvider = ({ children, setShowLogin }) => {
 
     useEffect(() => {
         async function loadData() {
+            await wakeUpBackend();
             await fetchFoodList();
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"));
@@ -125,7 +144,8 @@ const StoreContextProvider = ({ children, setShowLogin }) => {
         discount,
         setDiscount,
         appliedCoupon,
-        setAppliedCoupon
+        setAppliedCoupon,
+        loading
     };
 
     return (
