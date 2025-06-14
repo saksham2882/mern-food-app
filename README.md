@@ -1,7 +1,7 @@
 
 # MERN Food Ordering App
 
-A full-stack food ordering application built using the MERN stack (MongoDB, Express.js, React, Node.js). This project allows users to browse a variety of dishes, add items to their cart, apply coupons, place orders with Stripe payment integration, and track their order history. The app is designed to be responsive, user-friendly, and scalable, with a robust backend and an intuitive frontend.
+A full-stack food ordering application built using the MERN stack. It lets users explore dynamic dishes, add them to the cart, apply coupons, and place orders with secure Stripe payments. The backend handles all operations smoothly using Node.js, Express, and MongoDB, while the React frontend delivers a fast and clean experience. It balances functionality, performance, and user experience effectively.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -196,7 +196,7 @@ Contributions are welcome! Follow these steps:
 ---
 
 For detailed setup and API documentation:
-- [Backend README](./backend/README.md)
+- [Backend README](./backend/readme.md)
 - [Frontend README](./frontend/README.md)
 
 ---
