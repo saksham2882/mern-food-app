@@ -12,7 +12,6 @@ This repository contains the backend code for a MERN stack-based food ordering a
 - [Environment Variables](#environment-variables)
 - [How It Works](#how-it-works)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
